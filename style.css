@@ -1,8 +1,36 @@
-body{
-    color:#091e26;
-    background-color:#b7e8e8;
+@media(min-width: 600px)
+{
+    body{
+        color:#091e26;
+        background-color:#b7e8e8;
+    }
 }
+
+@media(max-width: 599px)
+{
+    body{
+    color:pink;
+    background-color:red;
+}
+    
+}
+
 
 #introduction{
     text-align: center;
+}
+
+
+#index{
+    display: grid;
+    grid-column: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+    
+}
+
+#index > button{
+    color: #091e26;
+    background-color: #32c982; 
+    width: 100px;
 }

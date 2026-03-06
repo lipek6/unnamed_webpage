@@ -4,7 +4,6 @@
 <head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
     <title>HTML Templates Page</title>
 </head>
@@ -13,7 +12,21 @@
     
     <div id="introduction">
         <h2>The HTML Templates Page</h2>
-        <p> This page contais a series of HTML common used templates.</p>
+        <p> This page contains a series of commonly used HTML templates.</p>
+        
+        <div id="index">
+            <button>    HEADERS                 </button>            
+            <button>    LISTS                   </button>            
+            <button>    ANCHORS                 </button>            
+            <button>    TEXT FORMATTING         </button>            
+            <button>    IMAGES                  </button>            
+            <button>    TABLES                  </button>            
+            <button>    FORMS & INPUTS          </button>            
+            <button>    SEMANTIC TAGS           </button>
+            <button>    INTERACTIVE ELEMENTS    </button>
+        </div>
+    
+    
     </div>
 
     <hr>
@@ -37,24 +50,136 @@
         <ol>
             <li> &lt;li&gt; List element &lt;/li&gt;</li>
             <li> &lt;li&gt; List element &lt;/li&gt;</li>
-            <li> &lt;li&gt; List element &lt;/li&gt;</li>
         </ol>
-        &lt;/ol&gt;
-        <br>
+        
         &lt;ul&gt; unordered list 
         <ul>
             <li> &lt;li&gt; List element &lt;/li&gt;</li>
             <li> &lt;li&gt; List element &lt;/li&gt;</li>
-            <li> &lt;li&gt; List element &lt;/li&gt;</li>
         </ul>
-        &lt;/ul&gt;
     </div>
 
     <hr>
 
     <div class="example-container" id="anchors">
-        <h2>ANCHORS</h2>
-
+        <h2>ANCHORS (LINKS)</h2>
+        <p>
+            &lt;a href="https://www.google.com" target="_blank"&gt; 
+            <a href="https://www.google.com" target="_blank">External Link (opens in new tab)</a> 
+            &lt;/a&gt;
+        </p>
+        <p>
+            &lt;a href="#headers"&gt; 
+            <a href="#headers">Internal Link (jumps to Headers section)</a> 
+            &lt;/a&gt;
+        </p>
     </div>
+
+    <hr>
+
+    <div class="example-container" id="formatting">
+        <h2>TEXT FORMATTING</h2>
+        <p>&lt;strong&gt; <strong>Strong (Bold)</strong> &lt;/strong&gt;</p>
+        <p>&lt;em&gt; <em>Emphasized (Italic)</em> &lt;/em&gt;</p>
+        <p>&lt;mark&gt; <mark>Highlighted text</mark> &lt;/mark&gt;</p>
+        <p>&lt;del&gt; <del>Deleted text</del> &lt;/del&gt; and &lt;ins&gt; <ins>Inserted text</ins> &lt;/ins&gt;</p>
+        <p>H&lt;sub&gt;<sub>2</sub>&lt;/sub&gt;O (Subscript)</p>
+        <p>X&lt;sup&gt;<sup>2</sup>&lt;/sup&gt; (Superscript)</p>
+    </div>
+
+    <hr>
+
+    <div class="example-container" id="images">
+        <h2>IMAGES</h2>
+        <p>&lt;img src="assets/ShowerCat.webp" alt="Shower cat" width="150"&gt;</p>
+        <img src="assets/ShowerCat.webp" alt="Shower cat" width="150">
+    </div>
+
+    <hr>
+
+    <div class="example-container" id="tables">
+        <h2>TABLES</h2>
+        <table border="1" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>&lt;th&gt; Header 1</th>
+                    <th>&lt;th&gt; Header 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;td&gt; Row 1, Col 1</td>
+                    <td>&lt;td&gt; Row 1, Col 2</td>
+                </tr>
+                <tr>
+                    <td>&lt;td&gt; Row 2, Col 1</td>
+                    <td>&lt;td&gt; Row 2, Col 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <div class="example-container" id="forms">
+        <h2>FORMS & INPUTS</h2>
+        <form action="#" method="POST">
+            <label for="username">&lt;label&gt; Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="&lt;input type='text'&gt;"><br><br>
+
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd" placeholder="&lt;input type='password'&gt;"><br><br>
+
+            <p>Radio Buttons:</p>
+            <input type="radio" id="opt1" name="choice" value="1">
+            <label for="opt1">&lt;input type="radio"&gt; Option 1</label><br>
+            <input type="radio" id="opt2" name="choice" value="2">
+            <label for="opt2">Option 2</label><br><br>
+
+            <input type="checkbox" id="chk" name="chk">
+            <label for="chk">&lt;input type="checkbox"&gt; Checkbox</label><br><br>
+
+            <label for="select-box">&lt;select&gt; Dropdown:</label>
+            <select id="select-box" name="options">
+                <option value="1">&lt;option&gt; First</option>
+                <option value="2">Second</option>
+            </select><br><br>
+
+            <label for="msg">&lt;textarea&gt;:</label><br>
+            <textarea id="msg" name="msg" rows="3" cols="25" placeholder="Type here..."></textarea><br><br>
+
+            <button type="button">&lt;button&gt; Normal Button</button>
+            <input type="submit" value="&lt;input type='submit'&gt;">
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="example-container" id="semantic">
+        <h2>SEMANTIC TAGS</h2>
+        <p>Tags that describe their meaning to both the browser and the developer (used for page structure).</p>
+        <article style="border: 1px dashed #999; padding: 10px;">
+            <header>
+                <h3>&lt;header&gt; and &lt;article&gt;</h3>
+            </header>
+            <section>
+                <p>&lt;section&gt; Content goes here.</p>
+            </section>
+            <footer>
+                <p>&lt;footer&gt; Footer information.</p>
+            </footer>
+        </article>
+    </div>
+
+    <hr>
+
+    <div class="example-container" id="interactive">
+        <h2>INTERACTIVE ELEMENTS</h2>
+        <details>
+            <summary>&lt;summary&gt; Click to open &lt;details&gt;</summary>
+            <p>Here is the hidden content! Very useful for FAQ sections.</p>
+        </details>
+    </div>
+
 </body>
 </html>
